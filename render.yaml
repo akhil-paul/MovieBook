@@ -3,8 +3,9 @@ services:
   - type: web
     name: moviebook-backend
     runtime: python
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    rootDirectory: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
@@ -13,6 +14,7 @@ services:
   - type: web
     name: moviebook-frontend
     runtime: static
-    buildCommand: cd frontend && npm install && npm run build
-    staticPublishPath: frontend/dist
+    rootDirectory: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
 

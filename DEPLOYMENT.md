@@ -58,16 +58,19 @@ git push -u origin main
    Name: moviebook-backend
    Region: Same as your database
    Branch: main
+   Root Directory: backend
    Runtime: Python 3
    
    Build Command:
-   pip install -r backend/requirements.txt
+   pip install -r requirements.txt
    
    Start Command:
-   cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+   uvicorn main:app --host 0.0.0.0 --port $PORT
    
    Instance Type: Free
    ```
+   
+   **⚠️ IMPORTANT:** Make sure to set **Root Directory** to `backend` in the settings!
 
 4. **Add Environment Variables**:
    - Click **"Advanced"** → **"Add Environment Variable"**
@@ -94,13 +97,16 @@ git push -u origin main
    ```
    Name: moviebook-frontend
    Branch: main
+   Root Directory: frontend
    
    Build Command:
-   cd frontend && npm install && npm run build
+   npm install && npm run build
    
    Publish Directory:
-   frontend/dist
+   dist
    ```
+   
+   **⚠️ IMPORTANT:** Make sure to set **Root Directory** to `frontend` in the settings!
 
 4. **Add Environment Variable**:
    - Click **"Advanced"** → **"Add Environment Variable"**
