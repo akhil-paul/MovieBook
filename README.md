@@ -9,6 +9,7 @@ A complete full-stack movie booking application built with **FastAPI** (backend)
 - [Project Structure](#project-structure)
 - [Installation & Setup](#installation--setup)
 - [Running the Application](#running-the-application)
+- [Deployment](#deployment)
 - [API Documentation](#api-documentation)
 - [Database Schema](#database-schema)
 - [Screenshots](#screenshots)
@@ -187,6 +188,37 @@ npm run dev
 ```
 
 Frontend will run on: **http://localhost:3000**
+
+---
+
+## 🚀 Deployment
+
+### Deploy to Render.com (FREE)
+
+This project is ready for free deployment on Render.com!
+
+**Quick Steps:**
+1. Push your code to GitHub
+2. Sign up at [Render.com](https://render.com)
+3. Deploy PostgreSQL database (free tier)
+4. Deploy backend web service
+5. Deploy frontend static site
+
+**📖 Detailed Instructions:**
+See [DEPLOYMENT.md](DEPLOYMENT.md) for complete step-by-step deployment guide.
+
+### Environment Variables
+
+**Backend:**
+- `DATABASE_URL` - PostgreSQL connection string (provided by Render)
+- `ENVIRONMENT` - Set to `production` for deployed apps
+
+**Frontend:**
+- `VITE_API_URL` - Your backend API URL (e.g., `https://moviebook-backend.onrender.com`)
+
+**Example files provided:**
+- `backend/env.example`
+- `frontend/env.example`
 
 ---
 
