@@ -13,7 +13,7 @@ app = FastAPI(title="Movie Booking API", version="1.0.0")
 allowed_origins = [
     "http://localhost:3000",
     "http://localhost:5173",  # Vite default port
-    "https://moviebook-frontend.onrender.com",  # Update with your actual Render frontend URL
+    "https://moviebook-frontend-50s0.onrender.com",  # Production frontend URL
 ]
 
 # In development, allow all origins
